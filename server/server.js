@@ -1,21 +1,12 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
-import axios from 'axios';
 import cors from 'cors';
 import { initializeOpenAI, generateHint, generateOutput, analyzeAnswer } from './OpenAI/OpenAILogic.js';
 import { addUser } from './auth/SignUp.js';
-// import createDBConnection from './database/db.js';
 import User from './database/models/User.js';
-import { Op } from 'sequelize';
 
 
 dotenv.config();
-
-// const connection = createDBConnection();
-
-console.log(process.env.OPENAI_API_KEY);
-
-const openai = initializeOpenAI(process.env.OPENAI_API_KEY);
 
 const app = express();
 app.use(cors());
@@ -30,7 +21,7 @@ app.use((req, res, next) => {
 
 app.get('/', async (req, res) => {
     res.status(200).send({
-        message: 'Hello from NewGPT',
+        message: 'Hello from Aldeia Senai',
     })
 });
 
