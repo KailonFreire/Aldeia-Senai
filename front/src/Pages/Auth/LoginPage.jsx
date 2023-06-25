@@ -36,7 +36,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://aldeia-senai-server.vercel.app:5000/api/login', {
+      const response = await axios.post('https://aldeia-senai-server.vercel.app/api/login', {
         email,
         password,
       });

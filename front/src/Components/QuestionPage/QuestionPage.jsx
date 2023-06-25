@@ -97,7 +97,7 @@ const QuestionPage = ({ question }) => {
         setLoadingResponse(true)
         const sourceCode = editor.getValue()
         // const sourceCode = textareaRef.current.value
-        fetch('https://aldeia-senai-server.vercel.app:5000', {
+        fetch('https://aldeia-senai-server.vercel.app', {
           method: 'POST',
           headers: {
             'Content-type': 'application/json'

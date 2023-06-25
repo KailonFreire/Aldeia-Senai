@@ -23,7 +23,7 @@ window.onload = () => {
   //   const language = document.getElementById('language').value
   //   const resultado = document.getElementById('resultado')
 
-  //   fetch('https://aldeia-senai-server.vercel.app:5000', {
+  //   fetch('https://aldeia-senai-server.vercel.app', {
   //     method: 'POST',
   //     headers: {
   //       'Content-type': 'application/json'
