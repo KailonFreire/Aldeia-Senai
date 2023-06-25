@@ -26,7 +26,7 @@ MANGOJATA 1700.00 1230.50 TOTAL = R$ 1884.58
 
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/exercise"  element={<QuestionPage question={question}/>}  />
       <Route path="/exerciseList" element={<ExerciseList />} />
