@@ -51,13 +51,13 @@ const SignUpPage = () => {
     }
 
     try {
-      const usernameExists = await axios.get(`http://localhost:5000/api/register/check-username/${username}`);
+      const usernameExists = await axios.get(`http://aldeia-senai-server.vercel.app:5000/api/register/check-username/${username}`);
       if (usernameExists.data.exists) {
         setErrorMessage('Nome de usuário já está sendo utilizado!');
         return;
       }
 
-      const emailExists = await axios.get(`http://localhost:5000/api/register/check-email/${email}`);
+      const emailExists = await axios.get(`http://aldeia-senai-server.vercel.app:5000/api/register/check-email/${email}`);
       if (emailExists.data.exists) {
         setErrorMessage('Esse email já existe! Ele é seu? Log In');
         return;
@@ -76,7 +76,7 @@ const SignUpPage = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/register', user);
+      const response = await axios.post('http://aldeia-senai-server.vercel.app:5000/api/register', user);
       navigate('/exercise');
       setErrorMessage('');
       setRegistrationStatus({ success: true, message: response.data.message });
