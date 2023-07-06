@@ -1,0 +1,4 @@
+[submodule "Aldeia senai"]
+	path = Aldeia senai
+	url = https://github.com/Nakaitsu/NewGPT/
+	branch = exerciseList
