@@ -22,7 +22,7 @@ console.log(process.env.OPENAI_API_KEY);
 const openai = initializeOpenAI(process.env.OPENAI_API_KEY);
 
 const corsOptions = {
-  origin: 'http://localhost:3000'
+  origin: 'aldeia-senai.vercel.app'
 }
 
 const app = express();
@@ -193,4 +193,4 @@ sequelize.authenticate()
 
 sequelize.sync()
 
-app.listen(5000, () => console.log('Server is running on port http://localhost:5000'));
+app.listen(5000, () => console.log('Server is running on port https://aldeia-senai-server.onrender.com'));

@@ -97,7 +97,7 @@ const QuestionPage = ({ question }) => {
         setLoadingResponse(true)
         const sourceCode = editor.getValue()
         // const sourceCode = textareaRef.current.value
-        fetch('http://localhost:5000', {
+        fetch('https://aldeia-senai-server.onrender.com', {
           method: 'POST',
           headers: {
             'Content-type': 'application/json'

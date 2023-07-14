@@ -1,6 +1,6 @@
 class UserService {
   constructor() {
-    this.endpoint = 'http://localhost:5000/users'
+    this.endpoint = 'https://aldeia-senai-server.onrender.com/users'
   }
 
   async getUser() {

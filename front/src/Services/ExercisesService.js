@@ -1,6 +1,6 @@
 class ExercisesService {
   constructor() {
-    this.endpoint = 'http://localhost:5000/exercises'
+    this.endpoint = 'https://aldeia-senai-server.onrender.com/exercises'
   }
 
   async postData(exercise) {
@@ -62,7 +62,7 @@ class ExercisesService {
   }
 
   async getHint(solution) {
-    const url = 'http://localhost:5000/'
+    const url = 'https://aldeia-senai-server.onrender.com/'
 
     let response = await fetch(url, {
       method: 'POST',
@@ -82,7 +82,7 @@ class ExercisesService {
   }
 
   async getSolutionOutput(solution) {
-    const url = 'http://localhost:5000/'
+    const url = 'https://aldeia-senai-server.onrender.com/'
 
     let response = await fetch(url, {
       method: 'POST',
@@ -102,7 +102,7 @@ class ExercisesService {
   }
 
   async submitSolution(solution) {
-    const url = 'http://localhost:5000/'
+    const url = 'https://aldeia-senai-server.onrender.com/'
 
     let response = await fetch(url, {
       method: 'POST',

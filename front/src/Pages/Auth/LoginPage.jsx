@@ -36,7 +36,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post('https://aldeia-senai-server.onrender.com/api/login', {
         email,
         password,
       });
