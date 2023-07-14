@@ -186,8 +186,14 @@ sequelize.authenticate()
 
 sequelize.sync()
 
-try{
-  app.listen(5000, () => console.log('Server is running on port https://aldeia-senai-server.onrender.com'));
-} catch (error){
-  console.error("error connecting to the server", error);
-}
+const server = app.listen(5000, (error) => {
+  if (error) {
+    console.error('Error occurred while starting the server:', error);
+  } else {
+    console.log('Server is running on port https://aldeia-senai-server.onrender.com');
+  }
+});
+
+server.on('error', (error) => {
+  console.error('Server error:', error);
+});
