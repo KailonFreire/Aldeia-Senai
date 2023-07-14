@@ -15,7 +15,7 @@ dotenv.config();
 const openai = initializeOpenAI(process.env.OPENAI_API_KEY);
 
 const corsOptions = {
-  origin: 'aldeia-senai.vercel.app'
+  origin: 'https://aldeia-senai.vercel.app'
 }
 
 const app = express();
