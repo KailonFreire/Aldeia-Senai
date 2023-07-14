@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db.js";
-import User from "./User.js";
 
 const Exercise = sequelize.define('Exercise', {
   id: {
@@ -41,7 +40,5 @@ const Exercise = sequelize.define('Exercise', {
   timestamps: false,
   logging: false
 })
-
-Exercise.belongsTo(User, { foreignKey: 'instructor_id' })
 
 export default Exercise

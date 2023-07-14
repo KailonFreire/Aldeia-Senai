@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db.js";
-import User from "./User.js";
 
 const UserToken = sequelize.define('Users_Auth_Token', {
   user_id: {
@@ -20,7 +19,5 @@ const UserToken = sequelize.define('Users_Auth_Token', {
   timestamps: false,
   freezeTableName: true
 })
-
-UserToken.belongsTo(User, { foreignKey: 'user_id' });
 
 export default UserToken;
