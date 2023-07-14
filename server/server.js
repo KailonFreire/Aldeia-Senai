@@ -4,20 +4,13 @@ import axios from 'axios';
 import cors from 'cors';
 import { initializeOpenAI, generateHint, generateOutput, analyzeAnswer } from './OpenAI/OpenAILogic.js';
 import { addUser } from './auth/SignUp.js';
-// import createDBConnection from './database/db.js';
 import User from './database/models/User.js';
-import { Op } from 'sequelize';
 import ExercisesRouter from './Routes/ExercisesRouter.js'
 import jwt from 'jsonwebtoken'
-import bcrypt from 'bcrypt'
 import UserAuthToken from './database/models/UserAuthToken.js'
 import sequelize from './database/db.js';
 
 dotenv.config();
-
-// const connection = createDBConnection();
-
-console.log(process.env.OPENAI_API_KEY);
 
 const openai = initializeOpenAI(process.env.OPENAI_API_KEY);
 
@@ -36,7 +29,6 @@ app.get('/', async (req, res) => {
     })
 });
 
-// 3
 
 app.post('/', async (req, res) => {
   try {
@@ -61,6 +53,7 @@ app.post('/', async (req, res) => {
     res.status(500).send({ error });
   }
 });
+
 //RegisterLogic
 
 app.get('/api/register/check-username/:username', async (req, res) => {
@@ -193,4 +186,8 @@ sequelize.authenticate()
 
 sequelize.sync()
 
-app.listen(5000, () => console.log('Server is running on port https://aldeia-senai-server.onrender.com'));
+try{
+  app.listen(5000, () => console.log('Server is running on port https://aldeia-senai-server.onrender.com'));
+} catch (error){
+  console.error("error connecting to the server", error);
+}
